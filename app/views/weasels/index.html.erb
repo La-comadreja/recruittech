@@ -1,0 +1,29 @@
+<h1>Listing weasels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Color</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weasels.each do |weasel| %>
+      <tr>
+        <td><%= weasel.name %></td>
+        <td><%= weasel.color %></td>
+        <td><%= link_to 'Show', weasel %></td>
+        <td><%= link_to 'Edit', edit_weasel_path(weasel) %></td>
+        <td><%= link_to 'Destroy', weasel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Weasel', new_weasel_path %>

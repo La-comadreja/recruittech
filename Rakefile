@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Recruittech::Application.load_tasks
+LinkedinAuthen::Application.load_tasks

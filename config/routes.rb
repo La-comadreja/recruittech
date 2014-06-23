@@ -1,10 +1,18 @@
-Recruittech::Application.routes.draw do
-  get "home/index"
+LinkedinAuthen::Application.routes.draw do
+  resources :login_modules
+
+  get "login_module/login"
+  resources :weasels
+
+  resources :predators
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  root :to => redirect('/login_modules')
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -40,7 +48,7 @@ Recruittech::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

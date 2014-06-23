@@ -1,0 +1,40 @@
+<%= if current_user == nil
+       val = "Please sign in for heavens sake"
+    else
+       val = "Welcome #{current_user.name}"
+	   
+	end   
+%>	
+<h1> <%= "Welcome #{current_user.name}" %> </h1>
+<h2> <%= "your acount email is #{current_user.email}" %> </h2> 
+<h2> <%= "Last time siged in at #{current_user.last_sign_in_at}" %> </h2> 
+
+<h2>Listing predators</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Teeth size</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @predators.each do |predator| %>
+      <tr>
+        <td><%= predator.name  %></td>
+        <td><%= predator.teeth_size %></td>
+        <td><%= link_to 'Show', predator %></td>
+        <td><%= link_to 'Edit', edit_predator_path(predator) %></td>
+        <td><%= link_to 'Destroy', predator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Predator', new_predator_path %>

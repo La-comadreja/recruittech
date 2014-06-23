@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Recruittech::Application.config.secret_key_base = '0f3ed328ff6e9d630615b89d1ede886781e8c5c7c63741db4c36a191c51186b42a6556ac1baa24df3dc8d00f1ce14aed90096c0d49179fcfba8fa8180029f7e7'
+LinkedinAuthen::Application.config.secret_key_base = 'f1d66974aa5868087f2bbfd0dccd00fec23e50b450140538a7e9ac75930b164aeaf27195140404c60e3989b11e305a9debd77eaae7f1587d0164c86645419b17'
