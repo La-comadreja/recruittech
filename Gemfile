@@ -44,6 +44,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-  gem 'devise'
-  gem 'omniauth'
-  gem 'omniauth-linkedin'
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-linkedin'
