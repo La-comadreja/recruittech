@@ -1,4 +1,6 @@
 LinkedinAuthen::Application.routes.draw do
+  resources :homes
+
   resources :login_modules
 
   get "login_module/login"

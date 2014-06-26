@@ -6,6 +6,7 @@ class LoginModulesController < ApplicationController
   def index
     @login_modules = LoginModule.all
 	if current_user != nil
+	  redirect_to home
 	end
   end
 
