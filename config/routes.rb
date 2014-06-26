@@ -2,10 +2,6 @@ LinkedinAuthen::Application.routes.draw do
   resources :login_modules
 
   get "login_module/login"
-  resources :weasels
-
-  resources :predators
-
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   root :to => redirect('/login_modules')
   # The priority is based upon order of creation: first created -> highest priority.
