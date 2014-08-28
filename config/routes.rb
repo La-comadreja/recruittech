@@ -12,7 +12,9 @@ RatingsApp::Application.routes.draw do
   
   get "static_pages/addComment"
 
-  #root "questions"
+  get "static_pages/index"
+  
+  root "static_pages#index"
   
   resources :answers
 

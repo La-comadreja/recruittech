@@ -1,4 +1,9 @@
 class StaticPagesController < ApplicationController
+
+  def index
+    @questions = Question.all 
+  end
+  
   def list
      @data=Answer.where(questionId:params[:questionId])
 	 render json: @data
