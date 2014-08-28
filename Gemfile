@@ -4,7 +4,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.5'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development, :test do # <<<< :development, not devlopment
+  gem 'sqlite3'
+end
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -45,3 +48,8 @@ gem 'rack-cors', :require => 'rack/cors'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
