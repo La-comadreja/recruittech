@@ -8,8 +8,7 @@ $(document).ready(function() {
     score: <%= rating.score  %>,
     path: '/assets',
 	click: function(score, evt) {
-      alert("Score is " + score + " evt is " + evt + " id is <%= "#id#{rating.id}"%>" );
-	  $.ajax({
+      $.ajax({
 	    headers: {'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'},
         url: "/ratings/<%= "#{rating.id}"%>?score="+score,
         type: 'PATCH',
@@ -29,7 +28,7 @@ $(document).ready(function() {
     score: 3,
     path: '/assets',
 	click: function(score, evt) {
-      alert("Score is " + score + " evt is " + evt);
+      
     }
   });
 });

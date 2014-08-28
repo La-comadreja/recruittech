@@ -6,8 +6,7 @@ $(document).ready(function() {
     score: <%= @question.rating %>,
     path: '/assets',
 	click: function(score, evt) {
-	  alert("Clciked" + evt);
-      
+	  
 	  $.ajax({
 	    headers: {'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'},
         url: '/static_pages/updateQuestionRating',
