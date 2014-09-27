@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.5'
 
 # Use sqlite3 as the database for Active Record
-group :development, :test do # <<<< :development, not devlopment
+group :development, :test do
   gem 'sqlite3'
 end
 
@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 1.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  gem 'sdoc', :require => false
 end
 
 gem 'rack-cors', :require => 'rack/cors'
